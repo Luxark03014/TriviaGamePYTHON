@@ -1,0 +1,27 @@
+[
+    {
+        "pregunta": "\u00bfEn qu\u00e9 a\u00f1o acabo la Segunda Guerra Mundial?",
+        "eleccionUsuario": "1939",
+        "correcta": false
+    },
+    {
+        "pregunta": "\u00bfQu\u00e9 acontecimiento marc\u00f3 el inicio de la Revoluci\u00f3n Francesa en 1789?",
+        "eleccionUsuario": "La firma del Tratado de Versalles",
+        "correcta": false
+    },
+    {
+        "pregunta": "\u00bfQui\u00e9n fue el primer emperador romano?",
+        "eleccionUsuario": "Augusto",
+        "correcta": true
+    },
+    {
+        "pregunta": "\u00bfCu\u00e1l es considerado el primer documento constitucional escrito del mundo?",
+        "eleccionUsuario": "La Carta Magna",
+        "correcta": true
+    },
+    {
+        "pregunta": "\u00bfEn qu\u00e9 a\u00f1o cay\u00f3 el Imperio Romano de Occidente?",
+        "eleccionUsuario": "509 d.C.",
+        "correcta": false
+    }
+]

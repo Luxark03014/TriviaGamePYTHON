@@ -1,0 +1,49 @@
+{
+    "preguntas": [
+        {
+            "Numero": "1",
+            "Enunciado": "\u00bfEn qu\u00e9 a\u00f1o acabo la Segunda Guerra Mundial?",
+            "Respuesta1": "1939",
+            "Respuesta2": "1945",
+            "Respuesta3": "1944",
+            "Respuesta4": "1950",
+            "RespuestaCorrecta": "Respuesta2"
+        },
+        {
+            "Numero": "2",
+            "Enunciado": "\u00bfQu\u00e9 acontecimiento marc\u00f3 el inicio de la Revoluci\u00f3n Francesa en 1789?",
+            "Respuesta1": "La firma del Tratado de Versalles",
+            "Respuesta2": "La ca\u00edda del Muro de Berl\u00edn",
+            "Respuesta3": "La toma de la Bastilla",
+            "Respuesta4": "La declaraci\u00f3n de la Independencia de Estados UnidosRespuesta correcta",
+            "RespuestaCorrecta": "Respuesta3"
+        },
+        {
+            "Numero": "3",
+            "Enunciado": "\u00bfQui\u00e9n fue el primer emperador romano?",
+            "Respuesta1": "Augusto",
+            "Respuesta2": "Ner\u00f3n",
+            "Respuesta3": "Julio C\u00e9sar",
+            "Respuesta4": "Roberto Mancas",
+            "RespuestaCorrecta": "Respuesta1"
+        },
+        {
+            "Numero": "4",
+            "Enunciado": "\u00bfCu\u00e1l es considerado el primer documento constitucional escrito del mundo?",
+            "Respuesta1": "La Carta Magna",
+            "Respuesta2": "La Constituci\u00f3n de los Estados Unidos",
+            "Respuesta3": "El C\u00f3digo de Hammurabi",
+            "Respuesta4": "Las Leyes de las Doce Tablas",
+            "RespuestaCorrecta": "Respuesta1"
+        },
+        {
+            "Numero": "5",
+            "Enunciado": "\u00bfEn qu\u00e9 a\u00f1o cay\u00f3 el Imperio Romano de Occidente?",
+            "Respuesta1": "509 d.C.",
+            "Respuesta2": "1453 d.C.",
+            "Respuesta3": "1066 d.C.",
+            "Respuesta4": "476 d.C",
+            "RespuestaCorrecta": "Respuesta4"
+        }
+    ]
+}

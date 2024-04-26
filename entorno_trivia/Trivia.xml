@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<triviaXML>
+    <pregunta>
+        <Pregunta id="1">¿En qué año acabo la Segunda Guerra Mundial?</Pregunta>
+            <Respuesta id="1" correcta="false">1939</Respuesta>
+            <Respuesta id="2" correcta="true">1945</Respuesta>
+            <Respuesta id="3" correcta="false">1944</Respuesta>
+            <Respuesta id="4" correcta="false">1950</Respuesta>
+        <Pregunta id="2">¿Qué acontecimiento marcó el inicio de la Revolución Francesa en 1789?</Pregunta>
+            <Respuesta id="1" correcta="false">La firma del Tratado de Versalles</Respuesta>
+            <Respuesta id="2" correcta="false">La caída del Muro de Berlín</Respuesta>
+            <Respuesta id="3" correcta="true">La toma de la Bastilla</Respuesta>
+            <Respuesta id="4" correcta="false">La declaración de la Independencia de Estados UnidosRespuesta correcta</Respuesta>
+        <Pregunta id="3">¿Quién fue el primer emperador romano?</Pregunta>
+            <Respuesta id="1" correcta="true">Augusto</Respuesta>
+            <Respuesta id="2" correcta="false">Nerón</Respuesta>
+            <Respuesta id="3" correcta="false">Julio César</Respuesta>
+            <Respuesta id="4" correcta="false">Roberto Mancas</Respuesta>
+        <Pregunta id="4">¿Cuál es considerado el primer documento constitucional escrito del mundo?</Pregunta>
+            <Respuesta id="1" correcta="true">La Carta Magna</Respuesta>
+            <Respuesta id="2" correcta="false">La Constitución de los Estados Unidos</Respuesta>
+            <Respuesta id="3" correcta="false">El Código de Hammurabi</Respuesta>
+            <Respuesta id="4" correcta="false">Las Leyes de las Doce Tablas</Respuesta>
+        <Pregunta id="5">¿En qué año cayó el Imperio Romano de Occidente?</Pregunta>
+            <Respuesta id="1" correcta="false">509 d.C.</Respuesta>
+            <Respuesta id="2" correcta="false">1453 d.C.</Respuesta>
+            <Respuesta id="3" correcta="false">1066 d.C.</Respuesta>
+            <Respuesta id="4" correcta="true">476 d.C</Respuesta>
+    </pregunta>
+</triviaXML>
