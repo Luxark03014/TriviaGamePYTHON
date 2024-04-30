@@ -2,6 +2,9 @@ import pygame
 import json
 import sys
 import xml.etree.ElementTree as ET
+from pygame import mixer
+
+
 
 def save_results_to_xml(results, total_correct, filepath):
     root = ET.Element("resultados")
@@ -21,6 +24,8 @@ def save_results_to_json(results, filepath):
 
 def init_pygame():
     pygame.init()
+    mixer.music.load('background.wav')
+    mixer.music.play(-1)
     screen = pygame.display.set_mode((800, 600))
     pygame.display.set_caption("Trivia Game")
     return screen
