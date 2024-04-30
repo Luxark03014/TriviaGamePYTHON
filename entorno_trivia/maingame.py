@@ -3,8 +3,50 @@ import json
 import sys
 import xml.etree.ElementTree as ET
 from pygame import mixer
+import os
 
+def display_results(screen, results, font):
+    running = True
+    font = pygame.font.Font(None, 15)
+    while running:
+        screen.fill((0, 0, 0))  
 
+        
+        y_pos = 50
+        for result in results:
+            correct_text = 'Correcto' if result['correcta'] else 'Incorrecto'
+            draw_text(f"Pregunta: {result['pregunta']} - Tu elección: {result['eleccionUsuario']} - {correct_text}", font, (255, 255, 255), screen, 50, y_pos)
+            y_pos += 30
+
+        pygame.display.flip()  
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+
+    pygame.quit()
+    sys.exit()
+                    
+def load_results_from_json(filepath):
+    if os.path.exists(filepath):
+        with open(filepath, 'r') as file:
+            return json.load(file)
+    return []
+
+def load_results_from_xml(filepath):
+    results = []
+    if os.path.exists(filepath):
+        tree = ET.parse(filepath)
+        root = tree.getroot()
+        for result_elem in root.findall('resultado'):
+            result = {
+                'pregunta': result_elem.find('pregunta').text,
+                'eleccionUsuario': result_elem.find('eleccionUsuario').text,
+                'correcta': result_elem.find('correcta').text == 'true'
+            }
+            results.append(result)
+        return results
+    return []
 
 def save_results_to_xml(results, total_correct, filepath):
     root = ET.Element("resultados")
@@ -54,18 +96,20 @@ def render_question(question, screen, font):
 def start_screen(screen):
     y_pos = 50
     font = pygame.font.Font(None, 50)
-   
     button_font = pygame.font.Font(None, 36)
     start_button = pygame.Rect(300, 400, 200, 60)
+    results_button = pygame.Rect(300, 470, 200, 60)  
     running = True
     backgroundINICIO = pygame.image.load('INICIO.jpg')
     
     while running:
         screen.fill((0, 0, 0))
         screen.blit(backgroundINICIO, (0, 0))
-        draw_text(' BIENVENIDO AL CONCURSO DE PREGUNTAS', font, (255, 255, 255), screen, 10, y_pos)
-        pygame.draw.rect(screen, (30, 144, 255), start_button)  
+        draw_text('BIENVENIDO AL CONCURSO DE PREGUNTAS', font, (255, 255, 255), screen, 10, y_pos)
+        pygame.draw.rect(screen, (30, 144, 255), start_button)
         draw_text("Iniciar", button_font, (255, 255, 255), screen, 340, 410)
+        pygame.draw.rect(screen, (30, 144, 255), results_button)
+        draw_text("Ver Resultados", button_font, (255, 255, 255), screen, 315, 480)
         pygame.display.flip()
 
         for event in pygame.event.get():
@@ -75,6 +119,9 @@ def start_screen(screen):
             elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                 if start_button.collidepoint(event.pos):
                     running = False
+                elif results_button.collidepoint(event.pos):
+                    results_json = load_results_from_json('resultados.json')
+                    display_results(screen, results_json, font)
 
 def final_result(results, total_correct, screen, font):
     screen.fill((0, 0, 0))
